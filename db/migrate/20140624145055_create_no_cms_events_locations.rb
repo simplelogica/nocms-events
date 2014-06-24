@@ -11,7 +11,7 @@ class CreateNoCmsEventsLocations < ActiveRecord::Migration
 
     create_table :no_cms_events_location_translations do |t|
 
-      t.belongs_to :no_cms_events_event, index: { name: 'index_nocms_events_location_translations_on_location_id' }
+      t.belongs_to :no_cms_events_location, index: { name: 'index_nocms_events_location_translations_on_location_id' }
       t.string :locale
       t.string :title
       t.text :description
