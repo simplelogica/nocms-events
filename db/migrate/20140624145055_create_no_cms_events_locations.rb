@@ -3,8 +3,8 @@ class CreateNoCmsEventsLocations < ActiveRecord::Migration
     create_table :no_cms_events_locations do |t|
       t.string :name
       t.text :description
-      t.double :lat
-      t.double :lng
+      t.float :lat
+      t.float :lng
 
       t.timestamps
     end
