@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140624145703) do
+ActiveRecord::Schema.define(version: 20140624150531) do
 
   create_table "no_cms_events_event_translations", force: true do |t|
     t.integer "no_cms_events_event_id"
@@ -27,7 +27,10 @@ ActiveRecord::Schema.define(version: 20140624145703) do
     t.datetime "ends_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "location_id"
   end
+
+  add_index "no_cms_events_events", ["location_id"], name: "index_no_cms_events_events_on_location_id"
 
   create_table "no_cms_events_location_translations", force: true do |t|
     t.integer "no_cms_events_location_id"
