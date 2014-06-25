@@ -3,5 +3,9 @@ module NoCms::Events
     def index
       @events = Event.includes(translations: [], location: [:translations])
     end
+
+    def show
+      @event = Event.includes(translations: [], location: [:translations]).find params[:id]
+    end
   end
 end
