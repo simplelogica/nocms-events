@@ -1,4 +1,3 @@
 Rails.application.routes.draw do
-
-  mount NoCms::Events::Engine => "/no_cms/events"
+  mount NoCms::Events::Engine => "/"
 end

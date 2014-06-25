@@ -1,0 +1,8 @@
+<h1><%= @event.title %></h1>
+<%= @event.description %>
+
+<% if @event.location %>
+  <h2><%= @event.location.name %></h2>
+  <%= @event.location.description %>
+  <%= link_to 'See in Google Maps', "https://www.google.com/maps/@#{@event.location.lat},#{@event.location.lng},7z" %>
+<% end %>
