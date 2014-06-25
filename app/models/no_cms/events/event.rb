@@ -1,7 +1,11 @@
 module NoCms::Events
   class Event < ActiveRecord::Base
 
-    translates :title, :description
+    translates :title, :description, :slug
+
+    extend FriendlyId
+    friendly_id :title, use: [:globalize]
+    include Concerns::GlobalizeSlugs
 
     belongs_to :location, class_name: "NoCms::Events::Location"
 

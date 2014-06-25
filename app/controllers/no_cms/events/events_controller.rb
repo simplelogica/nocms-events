@@ -5,7 +5,7 @@ module NoCms::Events
     end
 
     def show
-      @event = Event.includes(translations: [], location: [:translations]).find params[:id]
+      @event = Event.includes(translations: [], location: [:translations]).friendly.find params[:id]
     end
   end
 end
