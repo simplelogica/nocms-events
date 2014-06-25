@@ -1,7 +1,7 @@
 module NoCms::Events
   class Event < ActiveRecord::Base
 
-    translates :title, :description
+    translates :title, :description, :slug
 
     belongs_to :location, class_name: "NoCms::Events::Location"
 

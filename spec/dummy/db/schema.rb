@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140624150531) do
+ActiveRecord::Schema.define(version: 20140625133408) do
 
   create_table "no_cms_events_event_translations", force: true do |t|
     t.integer "no_cms_events_event_id"
     t.string  "locale"
     t.string  "title"
     t.text    "description"
+    t.string  "slug"
   end
 
   add_index "no_cms_events_event_translations", ["no_cms_events_event_id"], name: "index_no_cms_events_event_translations_on_event_id"
