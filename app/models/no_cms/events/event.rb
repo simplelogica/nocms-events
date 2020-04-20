@@ -5,7 +5,7 @@ module NoCms::Events
 
     extend FriendlyId
     friendly_id :title, use: [:globalize]
-    include Concerns::GlobalizeSlugs
+    include NoCms::Events::Concerns::GlobalizeSlugs
 
     belongs_to :location, class_name: "NoCms::Events::Location"
 
